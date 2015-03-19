@@ -1,0 +1,35 @@
+{
+  "name": "kefir-contrib-superagent",
+  "version": "0.0.0",
+  "description": "Construct Kefir streams from SuperAgent requests.",
+  "main": "lib/index.js",
+  "scripts": {
+    "prepublish": "in-publish && (mkdir lib && coffee -cbo lib src) || in-install",
+    "postpublish": "rm -rf lib",
+    "test": "mocha --no-colors test/**/*-spec.coffee",
+    "watch": "mocha --no-colors --watch test/**/*-spec.coffee"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/systeminsights/kefir-contrib-superagent"
+  },
+  "keywords": [],
+  "author": "System Insights",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/systeminsights/kefir-contrib-superagent/issues"
+  },
+  "homepage": "https://github.com/systeminsights/kefir-contrib-superagent",
+  "devDependencies": {
+    "chai": "^2.1.2",
+    "chai-as-promised": "^4.3.0",
+    "coffee-script": "^1.9.1",
+    "fantasy-eithers": "0.0.2",
+    "in-publish": "^1.1.1",
+    "kefir-contrib-run": "0.0.3",
+    "mocha": "^2.2.1"
+  },
+  "dependencies": {
+    "kefir": "^1.1.0"
+  }
+}

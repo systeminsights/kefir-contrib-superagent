@@ -1,5 +1,7 @@
 K = require 'kefir'
 
+noopUnsub = ->
+
 # :: SuperAgent.Response -> Kefir Error Response
 #
 # Convert a super agent response to a stream. If the response is a server error
@@ -24,6 +26,7 @@ fromSuperAgent = (superRequest) ->
     superRequest() .end (err, res) ->
       if err then emitter.error(err) else emitter.emit(res)
       emitter.end()
+    noopUnsub
 
 # :: (() -> SuperAgent.Request) -> Kefir Error Response
 #

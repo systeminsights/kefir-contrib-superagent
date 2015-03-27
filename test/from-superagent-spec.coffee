@@ -5,6 +5,7 @@
 mockReq = (r) -> () ->
   end: (f) ->
     process.nextTick((-> r.fold(f, (a) -> f(null, a))))
+    this
 
 describe "fromSuperAgent", ->
   it "should emit response from request as value", ->

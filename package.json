@@ -1,6 +1,6 @@
 {
   "name": "kefir-contrib-superagent",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Construct Kefir streams from SuperAgent requests.",
   "main": "lib/index.js",
   "scripts": {
